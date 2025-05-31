@@ -1,0 +1,173 @@
+/* Fuente pixel art de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive, Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #39ff14;
+    text-shadow: 0 0 8px #39ff14, 0 0 16px #00fff7;
+    font-size: 2.2rem;
+    margin-top: 30px;
+    letter-spacing: 2px;
+}
+
+#pokemon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px auto 0 auto;
+    max-width: 1200px;
+}
+
+.pokemon-card {
+    background: #181818;
+    border: 3px solid #39ff14;
+    border-radius: 12px;
+    box-shadow: 0 0 12px #00fff7, 0 0 2px #39ff14;
+    margin: 18px;
+    padding: 18px 10px 10px 10px;
+    width: 140px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    position: relative;
+}
+
+.pokemon-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 24px #ff00cc, 0 0 8px #39ff14;
+    border-color: #ff00cc;
+}
+
+.pokemon-card img {
+    width: 80px;
+    height: 80px;
+    image-rendering: pixelated;
+    margin-bottom: 8px;
+    filter: drop-shadow(0 0 8px #00fff7);
+}
+
+.pokemon-card p {
+    color: #fff;
+    font-size: 0.85rem;
+    margin: 0;
+    text-shadow: 0 0 4px #00fff7;
+    letter-spacing: 1px;
+}
+
+.moves-list {
+    list-style: none;
+    padding: 8px 0 0 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+}
+
+.moves-list li {
+    background: #ff00cc;
+    color: #fff;
+    border-radius: 8px;
+    padding: 3px 10px;
+    font-size: 0.7em;
+    font-family: 'Press Start 2P', cursive, Arial, sans-serif;
+    margin: 2px;
+    box-shadow: 0 0 6px #39ff14;
+    border: 2px solid #39ff14;
+    text-shadow: 0 0 4px #00fff7;
+}
+
+.moves-list li:hover {
+    background: #39ff14;
+    color: #181818;
+    border-color: #ff00cc;
+}
+
+#pagination {
+    text-align: center;
+    margin: 30px 0 10px 0;
+}
+
+#pagination button {
+    font-family: 'Press Start 2P', cursive, Arial, sans-serif;
+    background: #181818;
+    color: #39ff14;
+    border: 2px solid #ff00cc;
+    border-radius: 6px;
+    padding: 8px 18px;
+    margin: 0 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    box-shadow: 0 0 8px #00fff7;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+#pagination button:disabled {
+    background: #333;
+    color: #888;
+    border-color: #444;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+#pagination span {
+    color: #fff;
+    font-size: 0.9rem;
+    margin: 0 10px;
+    text-shadow: 0 0 4px #00fff7;
+}
+
+input[type="text"] {
+    font-family: 'Press Start 2P', cursive, Arial, sans-serif;
+    background: #181818;
+    color: #39ff14;
+    border: 2px solid #ff00cc;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    box-shadow: 0 0 8px #00fff7;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+input[type="text"]:focus {
+    border-color: #39ff14;
+    background: #222;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive, Arial, sans-serif;
+    background: #ff00cc;
+    color: #fff;
+    border: 2px solid #39ff14;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    box-shadow: 0 0 8px #00fff7;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+button:hover {
+    background: #39ff14;
+    color: #181818;
+    border-color: #ff00cc;
+}
+
+@media (max-width: 600px) {
+    #pokemon-list {
+        max-width: 98vw;
+    }
+    .pokemon-card {
+        width: 95vw;
+        margin: 10px auto;
+    }
+}
